@@ -1,0 +1,80 @@
+<!-- bike_catalog/frontend/templates/index.html -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Rowerów</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Nawigacja -->
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <a href="/" class="navbar-logo">Katalog Rowerów</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="/" class="navbar-link">Strona główna</a></li>
+                <li class="navbar-item logged-out"><a href="/login.html" class="navbar-link">Logowanie</a></li>
+                <li class="navbar-item logged-out"><a href="/register.html" class="navbar-link">Rejestracja</a></li>
+                <li class="navbar-item logged-in" style="display: none;"><a href="/profile.html" class="navbar-link">Mój profil</a></li>
+                <li class="navbar-item logged-in admin-only" style="display: none;"><a href="/admin/dashboard.html" class="navbar-link">Panel admina</a></li>
+                <li class="navbar-item logged-in" style="display: none;"><a href="#" id="logout-button" class="navbar-link">Wyloguj</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sekcja hero -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Witaj w Katalogu Rowerów</h1>
+            <p class="hero-subtitle">Znajdź swój idealny rower i odkryj nowe szlaki</p>
+            <div class="hero-buttons">
+                <a href="/login.html" class="btn btn-primary logged-out">Zaloguj się</a>
+                <a href="/register.html" class="btn btn-accent logged-out">Zarejestruj się</a>
+                <a href="/profile.html" class="btn btn-primary logged-in" style="display: none;">Mój profil</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja funkcji -->
+    <section class="features">
+        <div class="container">
+            <h2 class="features-title">Dlaczego warto korzystać z naszego katalogu?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <h3 class="feature-title">Szeroki wybór rowerów</h3>
+                    <p class="feature-description">Znajdziesz u nas rowery różnych typów - od miejskich po górskie i szosowe.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="feature-title">Łatwe wyszukiwanie</h3>
+                    <p class="feature-description">Dzięki zaawansowanym filtrom szybko znajdziesz rower odpowiadający Twoim potrzebom.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 class="feature-title">Opinie użytkowników</h3>
+                    <p class="feature-description">Przeczytaj recenzje i opinie innych użytkowników przed podjęciem decyzji.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Katalog Rowerów. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>
